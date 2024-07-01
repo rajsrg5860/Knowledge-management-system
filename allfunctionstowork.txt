@@ -1,0 +1,51 @@
+import fitz  
+import re
+
+
+# Function to extract text from the documents
+def extract_text_from_pdf(file_path):
+    document = fitz.open(file_path)
+    text = ""
+    for page_num in range(document.page_count):
+        page = document.load_page(page_num)
+        text += page.get_text()
+    return text
+
+pdf_text = extract_text_from_pdf("Documentsname.pdf")
+
+
+# Another function to extract the text
+def extract_text_from_pdf(pdf_path):
+    """Extracts text from the PDF."""
+    text = ""
+    doc = fitz.open(pdf_path)
+    for page in doc:
+        text += page.get_text()
+    return text
+
+#function to clean text 
+def clean_text(text):
+    # Remove non-alphanumeric characters
+    text = re.sub(r'[^a-zA-Z0-9\s]', '', text)
+    # Convert to lowercase
+    text = text.lower()
+    # Remove extra spaces
+    text = ' '.join(text.split())
+    return text
+
+cleaned_text = clean_text(pdf_text)
+print(cleaned_text)
+----------------------------------------------------
+#cleaning the text and its tokenization using Keras preprocessing text module 
+def preprocess_text(text):
+    """Cleans and tokenizes the text data."""
+    # Clean the text
+    text = re.sub(r'\W+', ' ', text.lower())
+    
+    # Tokenization and padding
+    tokenizer = Tokenizer(num_words=5000)
+    tokenizer.fit_on_texts([text])
+    sequences = tokenizer.texts_to_sequences([text])
+    padded_sequences = pad_sequences(sequences, maxlen=500)
+    
+    return tokenizer, padded_sequences
