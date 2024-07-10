@@ -1,5 +1,7 @@
-It's a framework that captures, organizes, stores, and disseminates knowledge of an organization. It helps in converting data into knowledge, facilitating easy access and retrieval of information by applying machine learning techniques. The main objective is to transform raw information into structured, actionable insights. 
+It’s a comprehensive system to streamline document management and enhance information retrieval. The system supports the upload of diverse document formats. Using Natural Language Processing it performs advanced entity extraction, facilitates intelligent question answering for the documents and answer other questions as well implementing the concept of Generative AI. Will also develop RAG model with which the system will be able to generate answer for complex queries ensuring the generated content is both accurate and coherent, addressing user queries effectively. 
 
-ImportantFunction section covers all relevant functions required.
+I have completed the q&a system using PDF, similarly I will work using word, html and also work with real time q&a. There are many things to integrate into it. and over a period of time I will develop this project to the high level product. 
 
-Need to have specific knowledge of python and its libraries such as pandas, numpy, PyMuPDF, NLTK, Spacy, Tensorflow
+Environment:
+streamlit for UI
+framework used: Langchain
