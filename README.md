@@ -18,7 +18,7 @@ Completion level:
 
 Completed the general question answering, implementing the techniques of storing the answer received in FAISS (vector database) maintaining the cache for faster retrieval.
 * LLM model used for this module is Ollama
-* many enhancement is yet to be done, like answer with real time data, fine tuning, reinforcement learning etc and will keep on working on it.
+* many enhancement is yet to be done, like answer with real time data, reinforcement learning etc and will keep on working on it.
 
 3. Personal Financial Advice: this module provides smart financial advice to the people based on people earnings; expenses so the people can avoid costly errors mitigate risk. It also offers services and products to the people.
 
