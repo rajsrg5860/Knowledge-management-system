@@ -1,8 +1,39 @@
-It’s a comprehensive system to streamline document management and enhance information retrieval. The system supports the upload of diverse document formats. Using Natural Language Processing it performs advanced entity extraction, facilitates intelligent question answering for the documents and answer other questions as well implementing the concept of Generative AI. Will also develop RAG model with which the system will be able to generate answer for complex queries ensuring the generated content is both accurate and coherent, addressing user queries effectively. 
+It’s a comprehensive system to extract knowledge’s and the management of extracted knowledge, thus I named as Knowledge Management System.
 
-I have completed the q&a system using PDF, similarly I will work using word, html and also work with real time q&a. There are many things to integrate into it. and over a period of time I will develop this project to the high level product. 
-I have tested with 2 pdf files one is large size pdf file and another is small size pdf file.
+Framework: Langchain and for LLMOps:  Langsmith
+Frontend: Streamlet, backend Python
+Vector Database: FAISS, Chroma DB
 
-Environment:
-streamlit for UI
-framework used: Langchain
+Main functionalities in a pipeline to be developed are as follows:
+1. Streamline document management and enhance information retrieval by supporting the upload functionalities of diverse document types
+
+Completion level: 
+* At the beginning completed the coding part using only python in the backend
+* Later completed coding part, using python in the backend and streamlet in the frontend.
+* LLM model used for this module is OpenAI
+* Will develop the enhancement code as and when the system matures
+
+2. General Query reply it replies to the question prompt as asked.
+Completion level:
+
+Completed the general question answering, implementing the techniques of storing the answer received in FAISS (vector database) maintaining the cache for faster retrieval.
+* LLM model used for this module is Ollama
+* many enhancement is yet to be done, like answer with real time data, fine tuning, reinforcement learning etc and will keep on working on it.
+
+3. Personal Financial Advice: this module provides smart financial advice to the people based on people earnings; expenses so the people can avoid costly errors mitigate risk. It also offers services and products to the people.
+
+Completion level:
+* Started collecting the requirement and data other major part is yet to be implemented.
+*Planning to use LLM model Ollama.
+
+Notes:
+query_pdf_python.pynb: This file contains the code only of backend and doesnot interact with frontend.
+Document_Upload.py: This file contains the code for PDF document uploads and question answer based on PDF.
+General_Query.py: This file contains the code of generic question answer.
+mains.py: This file contains streamlet code. We can run this file so that the application is up and running.
+
+
+
+
+
+

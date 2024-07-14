@@ -1,11 +1,12 @@
--Different types of documents example: pdf, docx, html etc for now I have done only with pdf files.
-
--varities of libraries should be installed as mentioned below :
+Varities of libraries should be installed as mentioned below :
 1. openai
 2. langchain
 3. PyPDF2
 4. faiss-cpu
 5. tiktoken
+6. Streamlit
+7. Langsmith
+8. OLLAMA 
 
 
 
