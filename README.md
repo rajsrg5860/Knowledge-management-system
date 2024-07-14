@@ -27,9 +27,13 @@ Completion level:
 *Planning to use LLM model Ollama.
 
 Notes:
+
 query_pdf_python.pynb: This file contains the code only of backend and doesnot interact with frontend.
+
 Document_Upload.py: This file contains the code for PDF document uploads and question answer based on PDF.
+
 General_Query.py: This file contains the code of generic question answer.
+
 mains.py: This file contains streamlet code. We can run this file so that the application is up and running.
 
 
