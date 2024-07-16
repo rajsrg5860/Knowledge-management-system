@@ -24,7 +24,7 @@ Completed the general question answering, implementing the techniques of storing
 
 Completion level:
 * Started collecting the requirement and data other major part is yet to be implemented.
-*Planning to use LLM model Ollama.
+*Planning to use LLM model Ollama(LLMA2)
 
 Notes:
 
