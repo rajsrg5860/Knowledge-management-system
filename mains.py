@@ -2,10 +2,25 @@ import streamlit as st
 from Document_Upload import process_pdf, perform_similarity_search
 from General_Query import get_chain
 import os
+import requests
 
 st.set_page_config(
     page_title="Knowledge Management System", layout="wide"
 )
+
+def get_ollama_response(input_text):
+    response = requests.post(
+        "http://localhost:8000/query",
+        json={'question': input_text}  # Ensure 'question' is correctly named
+    )
+    
+    # Print the API response for debugging
+    print("API Response:", response.json())
+    
+    if response.status_code == 200:
+        return response.json().get('response', "No response found.")
+    else:
+        return f"Error: {response.status_code} - {response.text}"
 
 st.title("Welcome to the Knowledge Management System")
 
@@ -48,9 +63,12 @@ with tab2:
     st.header("Ask General Question")
     input_text = st.text_input("Enter your question:")
     
-    if st.button("Get Answer"):
+    if st.button("Submit"):
         if input_text:
-            answer = get_chain(input_text)  # Call the function from Question_answer.py
-            st.write(answer)
+            try:
+                response = get_ollama_response(input_text)
+                st.success(f"Response: {response}")
+            except Exception as e:
+                st.error(f"Error: {e}")
         else:
-            st.error("Please enter a question.")
+            st.warning("Please enter a question.")
